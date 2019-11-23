@@ -64,17 +64,7 @@
 								
 							</div>
 						</div>
-						<div class="pagination pagination-right">
-							<ul>
-								<li><a href="#">Prev</a></li>
-								<li><a href="#">1</a></li>
-								<li><a href="#">2</a></li>
-								<li class="active"><a href="#">3</a></li>
-								<li><a href="#">4</a></li>
-								<li><a href="#">5</a></li>
-								<li><a href="#">Next</a></li>
-							</ul>
-						</div>
+						
 					</div>
 				</div>
 				<!-- END PAGE CONTENT-->
@@ -87,7 +77,7 @@
 	<!-- BEGIN FOOTER -->
 	<div class="footer">
 		<div class="footer-inner">
-			2013 &copy; Metronic by keenthemes.
+			<?php include("elements/footer.php");?>
 		</div>
 		<div class="footer-tools">
 			<span class="go-top">
