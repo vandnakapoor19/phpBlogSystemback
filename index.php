@@ -51,7 +51,7 @@
 														<li><i class="icon-calendar"></i> <a href="#"><?php echo $row->post_date;?></a></li>
 														<li><i class="icon-user"></i> <a href="#"><?php echo $row->name;?></a></li>
 													</ul>
-													<p><?php echo (strlen($row->content)<1000)?($row->content): ($row->content);?></p>
+													<p><?php echo (strlen($row->content)<1500)?($row->content): substr($row->content, 0, strrpos(substr($row->content, 0, 1500), ' ')) . '...';?></p>
 													
 													<a class="btn blue" href="blog_details.php?blog=<?php echo base64_encode($row->post_id) ;?>">Read more <i class="m-icon-swapright m-icon-white"></i></a>
 

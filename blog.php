@@ -88,7 +88,7 @@ $blogdata = $obj->selectBlog();
 									<thead>
 										<tr>
 											<th style="width:8px;"><input type="checkbox" class="group-checkable" data-set="#sample_1 .checkboxes" /></th>
-											<th>Username</th>
+											<th>Blog Tile</th>
 											<th class="hidden-480">Posted Date</th>
 											<th style="width:40%;">Content</th>
 											<th class="hidden-480">Edit</th>
@@ -105,7 +105,7 @@ $blogdata = $obj->selectBlog();
 															<td><input type="checkbox" class="checkboxes" value="1" /></td>
 															<td><?php echo $row->title;?></td>
 															<td class="hidden-480"><?php echo $row->post_date;?></td>
-															<td class="hidden-480"><?php echo ($row->content);?></td>
+															<td class="hidden-480"><?php echo (strlen($row->content)<1500)?($row->content): substr($row->content, 0, strrpos(substr($row->content, 0, 1500), ' ')) . '...';?></td>
 															<td class="center hidden-480"><a class="edit" href="javascript:;">Edit</a></td>
 															<td ><span class="label label-success">New</span></td>
 														</tr>
